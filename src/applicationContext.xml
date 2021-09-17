@@ -6,5 +6,5 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 实现类UserDaoImpl交给Spring管理 -->
-    <bean id="user" class="User"/>
+    <bean id="user" class="domain.User"/>
 </beans>

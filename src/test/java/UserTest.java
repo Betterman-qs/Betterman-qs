@@ -1,3 +1,4 @@
+import domain.User;
 import lombok.val;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,3 +1,6 @@
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import service.UserService;
 
 /**
  * @author dqs
@@ -7,6 +10,8 @@
 public class Application {
 
     public static void main(String[] args) {
-        System.out.println("");
+        ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService userService = (UserService) app.getBean("userService");
+        userService.save();
     }
 }
