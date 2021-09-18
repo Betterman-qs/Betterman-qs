@@ -1,6 +1,7 @@
 import domain.User;
 import lombok.val;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -12,9 +13,8 @@ public class UserTest {
 
     @Test
     public void demo1() {
-        //???????????????
-        val applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        User user = (User)applicationContext.getBean("user");
+        ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
+        User user = (User)app.getBean("user");
         user.say("Hello!");
     }
 
