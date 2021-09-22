@@ -1,6 +1,6 @@
-package testCode;
+package com.testCode;
 
-import annotation.MyAnnotation;
+import com.annotation.MyAnnotation;
 import java.lang.reflect.Method;
 
 /**

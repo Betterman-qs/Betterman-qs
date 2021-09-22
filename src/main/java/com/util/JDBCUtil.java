@@ -1,4 +1,4 @@
-package util;
+package com.util;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,6 +24,7 @@ public class JDBCUtil {
             //通过类加载器ClassLoader加载字节码文件到内存中，获取src路径下的文件
             ClassLoader classLoader = JDBCUtil.class.getClassLoader();
             URL resource = classLoader.getResource("jdbc.properties");
+            assert resource != null;
             String path = resource.getPath();
 
             //加载配置文件
